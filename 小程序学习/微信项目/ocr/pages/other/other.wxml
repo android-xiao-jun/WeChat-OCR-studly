@@ -1,0 +1,11 @@
+<!--pages/other/other.wxml-->
+<text>pages/other/other.wxml</text> 
+  <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+                        <view class="weui-select">{{accounts[accountIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            </view>

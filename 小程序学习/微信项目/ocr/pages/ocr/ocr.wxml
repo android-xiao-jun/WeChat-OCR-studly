@@ -1,0 +1,67 @@
+<!--pages/ocr/ocr.wxml-->
+<!-- <text>pages/ocr/ocr.wxml</text> -->
+
+<form bindsubmit='infoSubmit' bindreset="infoReset">
+  <image style='width:300px;height:170px;margin-left:10px' src='{{imageSrc}}'></image>
+  <view class="{{showView?'view_show':'view_hide'}}">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{name}}' name="name" placeholder="请输入姓名" disabled='true' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">民族</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{nationality}}' name="nationality" placeholder="请输入民族" disabled='true' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">出生日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{birth}}' name="birth" placeholder="请输入出生日期" disabled='true' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{sex}}' name="sex" placeholder="请输入性别" disabled='true' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">身份证号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{num}}' name="num" placeholder="请输入身份证号" disabled='true' />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">地址</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" value='{{address}}' name="address" placeholder="请输入地址" style="height: 3.3em" disabled='true' />
+          <view class="weui-textarea-counter">{{address_count}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+      <navigator url="../other/other" class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">其他信息填写</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+<button  class="weui-btn" type="default" bindtap='chooseImage'>选择身份证图片</button>
+</form>
+
